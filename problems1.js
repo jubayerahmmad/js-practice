@@ -188,7 +188,6 @@ console.log("--------------------------------");
 // const numbers4 = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 5];
 // console.log("Number of times 5 is repeated:", countRepeat(numbers4));
 
-
 //? Count how many vowels in a string.
 
 function countVowels(arr) {
@@ -205,6 +204,7 @@ function countVowels(arr) {
 
 const str = "Hello World";
 console.log(countVowels(str)); // Output: 3
+console.log("-------------");
 
 // function countVowel(arr) {
 //   let count = 0;
@@ -217,3 +217,46 @@ console.log(countVowels(str)); // Output: 3
 // }
 
 // console.log("Number of vowels in the string:", countVowel(str)); // Output: 3
+
+//? Find the longest word in a string.
+
+function findLongestWord(str) {
+  const words = str.split(" ");
+  let longestWord = "";
+  for (const word of words) {
+    if (word.length < longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+
+const sentence = "This is a sample sentence with multiples words";
+
+console.log("Longest word in the sentence:", findLongestWord(sentence)); // Output: "sentence"
+console.log("-----------------------------");
+
+//? Reverse a string without using built-in functions.
+
+function reverseString(str) {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+}
+
+const inputString = "Hello World";
+
+console.log("Reversed string:", reverseString(inputString)); // Output: "dlroW olleH"
+console.log("-----------------------------");
+
+
+//? Generate a random number between 10 to 20.
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * (20 - 10 + 1)) + 10;
+}
+
+console.log("Random number between 10 and 20:", getRandomNumber()); // Output: a random number between 10 and 20
+console.log("-----------------------------");
