@@ -73,9 +73,6 @@ const cheapestPhone = findCheapestPhone(phones);
 console.log("Cheapest phone:", cheapestPhone); // Output: Tecno
 console.log("--------------------------------");
 
-
-
-
 //? Calculate the total cost of the products in a shopping cart
 
 const shoppingCart = [
@@ -95,3 +92,86 @@ function totalCost(shoppingCart) {
 
 const total = totalCost(shoppingCart);
 console.log("Total cost:", total);
+console.log("--------------------------------");
+
+/*
+ *discounted price calculation
+ * upto 100 ---> 100tk
+ * upto 200 ---> 90tk
+ * more than 200 ---> 70tk
+ */
+
+function discountedPrice(amount) {
+  if (amount <= 100) {
+    const totalCost = amount * 100;
+    return totalCost;
+  } else if (amount <= 200) {
+    const totalCost = amount * 90;
+    return totalCost;
+  } else {
+    const totalCost = amount * 70;
+    return totalCost;
+  }
+}
+
+console.log("Discounted price:", discountedPrice(201)); // Output: 13500
+console.log("--------------------------------");
+
+//?calculator
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+function divide(num1, num2) {
+  return num1 / num2;
+}
+
+function calculator(num1, num2, operation) {
+  if (operation === 'add') {
+    const result = add(num1, num2);
+    return result;
+  }
+  if (operation ==='subtract') {
+    const result = subtract(num1, num2);
+    return result;
+  }
+  if (operation ==='multiply') {
+    const result = multiply(num1, num2);
+    return result;
+  }
+  if (operation === 'divide') {
+    return divide(num1, num2);
+  }
+}
+
+console.log("divide:", calculator(52, 21, "divide")); 
+
+// function calculation(num1, num2, operation) {
+//   switch (operation) {
+//     case "add":
+//       return add(num1, num2);
+//     case "subtract":
+//       return subtract(num1, num2);
+//     case "multiply":
+//       return multiply(num1, num2);
+//     case "divide":
+//       if (num2 === 0) {
+//         throw new Error("Cannot divide by zero");
+//       }
+//       return divide(num1, num2);
+//     default:
+//       throw new Error("Invalid operation");
+//   }
+
+// }
+
+// console.log("Addition:", calculation(5, 7, "multiply")); // Output: 12
+

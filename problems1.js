@@ -153,3 +153,67 @@ const noDupli = removeDuplicates(arr);
 
 console.log("Array without duplicates:", noDupli);
 console.log("--------------------------------");
+
+//? You are given an array of numbers. Count how many times the a number is repeated in the array.
+
+function findFive(array) {
+  let five = [];
+  for (const number of array) {
+    if ("5".includes(number)) {
+      //number.toString().includes("5");
+      five.push(number);
+    }
+  }
+  const fivelen = five.length;
+  return fivelen;
+}
+
+const numbers1 = [5, 6, 11, 12, 8, 34, 98, 5];
+console.log("Numbers containing 5:", findFive(numbers1));
+console.log("--------------------------------");
+
+// function countRepeat(arr) {
+//   let count = 0;
+//   let numMap = {};
+//   for (let num of arr) {
+//     if (numMap[num]) {
+//       count++;
+//     } else {
+//       numMap[num] = true;
+//     }
+//   }
+//   return count;
+// }
+
+// const numbers4 = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 5];
+// console.log("Number of times 5 is repeated:", countRepeat(numbers4));
+
+
+//? Count how many vowels in a string.
+
+function countVowels(arr) {
+  let vowels = [];
+  for (const char of arr) {
+    if (["a", "e", "i", "o", "u"].includes(char.toLowerCase())) {
+      vowels.push(char);
+      // vowels.push(arr[char]);
+      // vowels++;
+    }
+  }
+  return vowels.length;
+}
+
+const str = "Hello World";
+console.log(countVowels(str)); // Output: 3
+
+// function countVowel(arr) {
+//   let count = 0;
+//   for (const char of arr) {
+//     if (["a", "e", "i", "o", "u"].includes(char.toLowerCase())) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log("Number of vowels in the string:", countVowel(str)); // Output: 3
