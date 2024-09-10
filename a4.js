@@ -9,7 +9,7 @@ function calculateTax(income, expenses) {
     return "Invalid Input";
   }
 }
-console.log(calculateTax(1500, -1000));
+// console.log(calculateTax(1500, -1000));
 
 //? problem 2
 
@@ -26,5 +26,53 @@ function sendNotification(email) {
     return notification;
   }
 }
-const email = "zubayer.ahmmad@gmail.com";
-console.log(sendNotification(email));
+// const email = "zubayer.ahmmad@gmail.com";
+// console.log(sendNotification(email));
+
+//? problem 3
+
+function checkDigitsInName(string) {
+  if (typeof string !== "string") {
+    return "Invalid Input";
+  }
+  const names = string.split("");
+  for (const name of names) {
+    if (!isNaN(name)) {
+      return true;
+    }
+  }
+  return false;
+}
+// console.log(checkDigitsInName("Raj12"));
+
+//? problem 4
+
+function calculateFinalScore(obj) {
+  if (typeof obj !== "object") {
+    return "Invalid Input";
+  }
+  if (studentName.isFFamily === true) {
+    score = 20;
+  } else {
+    score = 0;
+  }
+
+  const finalScore = studentName.testScore + studentName.schoolGrade + score;
+
+  if (finalScore >= 80) {
+    return true;
+  } else {
+    return false;
+  }
+}
+// const studentName = "student";
+const studentName = {
+  name: "Rajib",
+  testScore: 47,
+  schoolGrade: 28,
+  isFFamily: true,
+};
+
+console.log(calculateFinalScore(studentName));
+
+//? problem 5
