@@ -10,3 +10,21 @@ function calculateTax(income, expenses) {
   }
 }
 console.log(calculateTax(1500, -1000));
+
+//? problem 2
+
+function sendNotification(email) {
+  if (!email.includes("@")) {
+    return "Invalid Email";
+  }
+  if (typeof email === "string" && email.includes("@")) {
+    const domain = email.split("@");
+    const domainName = domain[0];
+    const user = email.split("@");
+    const userName = user[1];
+    const notification = `${domainName} sent you an email from ${userName}`;
+    return notification;
+  }
+}
+const email = "zubayer.ahmmad@gmail.com";
+console.log(sendNotification(email));
