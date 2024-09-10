@@ -40,7 +40,7 @@ function checkDigitsInName(string) {
   }
   return false;
 }
-// console.log(checkDigitsInName("Raj12"));
+// console.log(checkDigitsInName("Raj123"));
 
 //? problem 4
 function calculateFinalScore(obj) {
@@ -53,6 +53,9 @@ function calculateFinalScore(obj) {
     score = 0;
   }
 
+  if (studentName.testScore > 50 || studentName.schoolGrade > 30) {
+    return false;
+  }
   const finalScore = studentName.testScore + studentName.schoolGrade + score;
 
   if (finalScore >= 80) {
@@ -62,14 +65,9 @@ function calculateFinalScore(obj) {
   }
 }
 // const studentName = "student";
-// const studentName = {
-//   name: "Rajib",
-//   testScore: 47,
-//   schoolGrade: 28,
-//   isFFamily: true,
-// };
+// const studentName = {name:"Rajib", testScore: 47, schoolGrade: 28, isFFamily: true,};
 
-// console.log(calculateFinalScore(studentName));
+console.log(calculateFinalScore(studentName));
 
 //? problem 5
 function waitingTime(array, number) {
