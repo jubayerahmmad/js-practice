@@ -8,11 +8,11 @@ function calculateTax(income, expenses) {
     return "Invalid Input";
   }
 }
-// console.log(calculateTax(1500, -1000));
+// console.log(calculateTax(10000, 3000));
 
 //? problem 2
 function sendNotification(email) {
-  if (!email.includes("@")) {
+  if (!email.includes("@") || email.includes("@@")) {
     return "Invalid Email";
   }
   if (typeof email === "string" && email.includes("@")) {
@@ -67,7 +67,7 @@ function calculateFinalScore(obj) {
 // const studentName = "student";
 // const studentName = {name:"Rajib", testScore: 47, schoolGrade: 28, isFFamily: true,};
 
-console.log(calculateFinalScore(studentName));
+// console.log(calculateFinalScore(studentName));
 
 //? problem 5
 function waitingTime(array, number) {
