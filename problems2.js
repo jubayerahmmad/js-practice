@@ -273,7 +273,8 @@ const employees = [
 function calculateMonthlySalary(employees) {
   let totalSalary = 0;
   for (const employee of employees) {
-    const currentSalary =  employee.starting + employee.increment * employee.experience;
+    const currentSalary =
+      employee.starting + employee.increment * employee.experience;
     totalSalary += currentSalary;
   }
   return totalSalary;
@@ -295,7 +296,7 @@ const employees2 = [
 function findMaxSalary(employees) {
   let maxSalary = 0;
   let maxSalaryEmployee = "";
-  for (const employee of employees2) {
+  for (const employee of employees) {
     if (employee.salary > maxSalary) {
       maxSalary = employee.salary;
       maxSalaryEmployee = employee.name;
@@ -305,5 +306,28 @@ function findMaxSalary(employees) {
 }
 
 console.log("Employee with Highest Salary:", findMaxSalary(employees2));
+console.log("--------------------------------");
 
 //? task-6 Your task is to write a JavaScript function named calculateAverageSalary that takes an array of employee objects as input and returns the average salary of all employees.
+
+const employees3 = [
+  { name: "rahim", salary: 75000 },
+  { name: "robin", salary: 50000 },
+  { name: "rafi", salary: 60000 },
+  { name: "ron", salary: 80000 },
+  { name: "rashed", salary: 90000 },
+];
+function calculateAverageSalary(employees) {
+  let totalSalary = 0;
+  let employeeCount = 0;
+  for (const employee of employees) {
+    totalSalary += employee.salary;
+    employeeCount++;
+  }
+  return totalSalary / employeeCount;
+}
+
+const averageSalary = calculateAverageSalary(employees3);
+
+console.log("Average Salary:", averageSalary);
+console.log("--------------------------------");
