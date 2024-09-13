@@ -80,3 +80,27 @@ console.log(password(passObj));
 console.log("----------------------------------------------------------------");
 
 //? problem - 5
+
+function monthlySavings(array, livingCost) {
+  if (!Array.isArray(array) && typeof livingCost !== "number") {
+    return "Invalid Input";
+  }
+  let totalPayment = 0;
+  for (let payment of array) {
+    if (payment >= 3000) {
+      let tax = payment * 0.2;
+      totalPayment += payment - tax;
+    } else {
+      totalPayment += payment;
+    }
+  }
+  let savings = totalPayment - livingCost;
+  if (savings < 0) {
+    return "earn more";
+  }
+  return savings;
+}
+
+const payments = [1000, 2000, 2500];
+const livingCost = 5000;
+console.log(monthlySavings(payments, livingCost));
