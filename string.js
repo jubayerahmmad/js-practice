@@ -46,10 +46,10 @@ let inputString = "Hellox WorldX";
 let outputString = "";
 
 for (let i = 0; i < inputString.length; i++) {
-  if (inputString[i] === 'x') {
-    outputString += 'y';
-  } else if (inputString[i] === 'X') {
-    outputString += 'Y';
+  if (inputString[i] === "x") {
+    outputString += "y";
+  } else if (inputString[i] === "X") {
+    outputString += "Y";
   } else {
     outputString += inputString[i];
   }
@@ -65,7 +65,7 @@ let outputString2 = "";
 let words = inputString2.split(" ");
 
 for (let i = 0; i < words.length; i++) {
-    outputString2 += words[i].charAt(0).toUpperCase() + words[i].slice(1) + " ";
+  outputString2 += words[i].charAt(0).toUpperCase() + words[i].slice(1) + " ";
 }
 
 console.log(outputString2.trim());
