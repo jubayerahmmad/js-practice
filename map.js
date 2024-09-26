@@ -21,9 +21,9 @@
 //* console.log("Original array:", originalArray);
 //* console.log("Transformed array:", transformedArray);
 
-// const numbers = [1, 2, 3, 4, 44, 58];
-// const doubledNumbers = numbers.map((num) => num * 2);
-// console.log(doubledNumbers);
+const numbers = [1, 2, 3, 4, 44, 58];
+const doubledNumbers = numbers.map((num) => num * 2);
+console.log(doubledNumbers);
 
 const nums = [1, 5, 3, 4, 8];
 const doble = nums.map((nums) => nums * 2);

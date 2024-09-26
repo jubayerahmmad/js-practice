@@ -1,4 +1,6 @@
-//object destructuring
+// Destructuring is a JavaScript feature that allows you to extract values from arrays or objects and assign them to variables.
+
+// object destructuring
 const person = {
   name: "John",
   age: 30,
