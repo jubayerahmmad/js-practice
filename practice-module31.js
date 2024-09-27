@@ -24,7 +24,7 @@ console.log(data.Sophia.study[1].secondary[1]);
 // task-2: console .log  output: Petersburg, Herry
 
 let students = {
-  2222: {
+  details: {
     name: "Jack",
     section: "C",
     class: "IX",
@@ -47,9 +47,13 @@ let students = {
     },
   },
 };
-
 console.log(students[2222].address.city);
 console.log(students[3333].name);
+
+const {
+  address: { street },
+} = students[3333];
+console.log(street);
 
 // task-3 : access and then show habluder adda
 // show output Beginner

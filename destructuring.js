@@ -48,6 +48,38 @@ const {
 
 console.log(street, city2, country);
 
+// nested
+let students = {
+  details: {
+    name: "Jack",
+    section: "C",
+    class: "IX",
+    address: [
+      { "building no": 12 },
+      { street: "St. Jonson" },
+      { city: "Petersburg" },
+      { country: "UK" },
+    ],
+  },
+  3333: {
+    name: "Herry",
+    section: "D",
+    class: "X",
+    address: [
+      { "building no": 18 },
+      { street: "St. Lucia" },
+      { city: "Johannesburg" },
+      { country: "USA" },
+    ],
+  },
+};
+const {
+  details: {
+    address: [, , , country1],
+  },
+} = students;
+console.log("53", country1);
+
 //swapping variables
 let a = 12,
   b = 3;
