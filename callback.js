@@ -31,3 +31,21 @@ function fetchData(callback) {
 // fetchData((data) => {
 //   console.log(data);
 // });
+
+//practice PH
+function greeting(greetingHandler, name) {
+  greetingHandler(name);
+}
+
+function greetingMorning(name) {
+  console.log("good morning", name);
+}
+function greetingEvening(name) {
+  console.log("good ebening", name);
+}
+function greetingNight(name) {
+  console.log("good night", name);
+}
+greeting(greetingEvening, "brokenlona");
+greeting(greetingMorning, "xubayer");
+greeting(greetingNight, "xubayer");
