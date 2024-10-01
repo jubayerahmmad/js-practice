@@ -17,4 +17,10 @@ function loadUsers() {
 
 function displayUsers(data) {
   console.log(data);
+  const userList = document.getElementById("user-list");
+  for (let user of data) {
+    const li = document.createElement("li");
+    li.innerText = user.address?.zipcode;
+    userList.appendChild(li);
+  }
 }
